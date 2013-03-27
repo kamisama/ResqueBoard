@@ -11,4 +11,4 @@ ResqueBoard is built for 2 objectives :
 * see what's happening right now in realtime
 * visualize what's happened in the past with various charts, to easily benchmarks and balance your workers
 
-Learn more on the [official website](http://resqueboard.kamisama.me), or take a look at the [demo](http://resque.neetcafe.com).
+Learn more on the [official website](http://resqueboard.kamisama.me), or take a look at the [demo](http://resque.kamisama.me/).
