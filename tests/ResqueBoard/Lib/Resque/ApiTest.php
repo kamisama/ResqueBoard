@@ -20,6 +20,10 @@
 
 namespace ResqueBoard\Test\Lib\Resque;
 
+# Include configuration files
+require_once(dirname(__FILE__) . '/../../../../src/ResqueBoard/Config/Bootstrap.php');
+require_once(dirname(__FILE__) . '/../../../../src/ResqueBoard/Config/Core.php');
+
 /**
  * ApiTest Class
  *

@@ -31,7 +31,7 @@
  */
 $settings = array(
     'cubePublic' => array(
-        'host' => $_SERVER['SERVER_NAME'],
+        'host' => (isset($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : 'http://localhost:1081/',
         'port' => 1081
     ),
     'readOnly' => true,
@@ -50,6 +50,7 @@ ResqueBoard\Lib\Service\Service::$settings = array(
         'host' => '127.0.0.1',
         'port' => 6379,
         'database' => 0,
+        'password' => '',
         'prefix' => 'resque'
     ),
     'Mongo' => array(

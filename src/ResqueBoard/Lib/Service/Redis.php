@@ -38,6 +38,12 @@ class Redis extends AbstractService
 
         try {
             $redis->connect($settings['host'], $settings['port']);
+
+            if (isset($settings['password']) && !empty($settings['password'])) {
+                if ($redis->auth($settings['password']) === false) {
+                    throw new \Exception('Unable to authenticate with redis!');
+                }
+            }
         } catch (\Exception $e) {
             throw new \Exception('Unable to connect to Redis server');
         }
