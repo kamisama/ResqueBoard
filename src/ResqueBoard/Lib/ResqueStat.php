@@ -649,10 +649,11 @@ class ResqueStat
         }
 
         $jobs = $this->formatJobs($jobs);
+        $pendingStatus = self::JOB_STATUS_WAITING;
         array_walk(
             $jobs,
-            function (&$j) {
-                $j['status'] = self::JOB_STATUS_WAITING;
+            function (&$j) use ($pendingStatus){
+                $j['status'] = $pendingStatus;
             }
         );
         return $jobs;
